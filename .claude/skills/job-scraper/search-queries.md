@@ -88,8 +88,14 @@ site:indeed.ca "data governance specialist" Montreal
 site:indeed.ca "research data management" Montreal OR Quebec
 site:jobs.gc.ca "data governance" Montreal
 site:jobs.gc.ca "data steward"
-"data governance" OR "research data management" site:alliance.can.ca
+site:jobbank.gc.ca "data governance" OR "data steward" Montreal
+site:jobbank.gc.ca "gestion des donnees" Montreal
+"data governance" OR "research data management" site:alliancecan.ca
 ```
+
+> `jobbank.gc.ca` and `alliancecan.ca` both have CLIs (`jobbankca-search`,
+> `alliancecan-search`) that `/scrape` runs directly. These `site:` lines are the
+> WebSearch fallback for when a CLI fails.
 
 ### Priority 2: LMS / Learning Ecosystem Management
 
@@ -103,6 +109,8 @@ site:indeed.ca "Moodle administrator" Montreal OR Quebec
 site:indeed.ca "LMS" "learning" manager Montreal
 site:linkedin.com/jobs "instructional technology" Montreal
 site:linkedin.com/jobs "learning and development" "Moodle" Canada
+site:jobbank.gc.ca "Moodle" OR "learning management system" Montreal
+site:jobbank.gc.ca "conception pedagogique" OR "formation" Montreal
 ```
 
 ### Priority 3: Open Science / Research Infrastructure
@@ -113,8 +121,11 @@ Niche but strong fit; Digital Research Alliance is a primary target.
 site:linkedin.com/jobs "open science" Canada
 site:linkedin.com/jobs "data curation" Montreal OR Canada
 site:indeed.ca "open science" OR "research data" Montreal
-"curation officer" OR "data curator" site:alliance.can.ca
+"curation officer" OR "data curator" site:alliancecan.ca
+site:alliancecan.ca/en/career-opportunities
+site:alliancecan.ca/fr/career-opportunities
 site:jobs.gc.ca "open science"
+site:jobbank.gc.ca "open science" OR "research data"
 site:linkedin.com/jobs "FAIR data" Canada
 ```
 
@@ -128,6 +139,7 @@ site:indeed.ca "LAMP" developer Montreal
 site:linkedin.com/jobs "web developer" "data" Montreal
 site:linkedin.com/jobs "technical consultant" "data" Montreal
 site:indeed.ca "software developer" "research" Montreal
+site:jobbank.gc.ca "developpeur" OR "developer" Montreal
 ```
 
 ## Location Filter
