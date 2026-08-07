@@ -5,7 +5,15 @@
       "Bash(python3:*)",
       "Bash(python:*)",
       "Bash(curl:*)",
-      "Bash(bun:*)"
+      "Bash(bun:*)",
+      "WebSearch",
+      "WebFetch(domain:ca.indeed.com)",
+      "WebFetch(domain:ca.linkedin.com)",
+      "WebFetch(domain:www.unjobnet.org)",
+      "WebFetch(domain:alliancecan.ca)",
+      "WebFetch(domain:careers.aircanada.com)",
+      "WebFetch(domain:cae.wd3.myworkdayjobs.com)",
+      "WebFetch(domain:dailyremote.com)"
     ]
   }
 }

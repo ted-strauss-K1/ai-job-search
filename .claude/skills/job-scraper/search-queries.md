@@ -1,76 +1,154 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
-
 ## Search Sites
 
-Primary (Danish job market):
-- **jobindex.dk** - largest Danish job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: Denmark / your city)
-- **karriere.dk** - IDA's job board (engineering/science roles)
-- **jobfinder.dk** - another major Danish job board
-- **akademikernes.dk** - academic union job board
+Primary (Canadian job market):
+- **linkedin.com/jobs** — LinkedIn job listings (filter: Montreal, Quebec, Canada or Remote)
+- **indeed.ca** — Indeed Canada (major general job board)
+- **jobs.gc.ca** — Government of Canada job board (federal positions; highly relevant for Ted's profile)
+- **workopolis.com** — Canadian job board
+- **glassdoor.ca** — Job listings with company reviews
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+Secondary (sector-specific):
+- **alliancecan.ca/en/latest/careers** — Digital Research Alliance of Canada postings (direct HTML; #1 target)
+- University HR pages (concordia.ca/careers, mcgill.ca/hr, umontreal.ca) — search directly for IT/data roles
+- **charityvillage.com** — Nonprofit and research sector jobs
+- Direct Google searches with `site:` filters for known target organizations
+
+## Additional Sources & Scraping Methods
+
+WebSearch cannot see fresh LinkedIn/Indeed postings (JS-rendered index pages only). Prefer these
+directly-fetchable sources. Grouped by scrape mechanism.
+
+### Tier 1 — ATS JSON/API endpoints (cleanest; plain WebFetch, no browser)
+
+Many company career pages are front-ends over public ATS endpoints. Query the endpoint directly:
+
+- **Greenhouse**: `https://boards-api.greenhouse.io/v1/boards/<company>/jobs` → JSON list of all openings.
+  Known: LawZero (`lawzero`). Try slug = company name lowercased.
+- **Lever**: `https://api.lever.co/v0/postings/<company>?mode=json` → JSON.
+- **Workday**: career sites on `*.myworkdayjobs.com`. Search endpoint:
+  `POST https://<tenant>.<dc>.myworkdayjobs.com/wday/cxs/<tenant>/<site>/jobs`
+  with JSON body `{"appliedFacets":{},"limit":20,"offset":0,"searchText":"data governance"}`.
+  Known Workday tenants: **CAE** (`cae.wd3.myworkdayjobs.com`), Bombardier, many crown corps + universities.
+  If unsure of the path, load the career page in Playwright and read the XHR to `/wday/cxs/.../jobs`.
+- **iCIMS** (`*.icims.com`): JS-rendered. Use Playwright; the job body lives in an iframe
+  (extract `iframe.contentDocument.body.innerText`). Confirmed working on BC Ferries.
+
+### Tier 2 — Public sector / crown corporations (target sector)
+
+- **jobs.gc.ca** (GC Jobs, federal) — search "data governance", "data steward", "open science"
+- **carrieres.gouv.qc.ca** — Quebec provincial government
+- Direct crown-corp career portals: **BDC, CDPQ, Hydro-Québec, VIA Rail, Loto-Québec, Canada Post,
+  CMHC/SCHL, Business Development Bank** — many on Workday (see Tier 1 method)
+
+### Tier 3 — Quebec job boards (browser-scrapable; catch FR postings)
+
+- **jobillico.com**, **jobboom.com** — Quebec-specific; surface `gouvernance des données`,
+  `technopédagogique`, `conseiller pédagogique` roles LinkedIn misses. Use Playwright for listings.
+
+### Tier 4 — University HR (RDM / open-science / edtech fit)
+
+- McGill (`mcgill.ca/hr` → Workday), Concordia, Université de Montréal, UQAM, Polytechnique, HEC,
+  École de technologie supérieure (ÉTS). Search IT/data/library/learning-technology roles.
+
+### Tier 5 — Niche RDM / library / research-infrastructure boards
+
+- **Digital Research Alliance careers** (alliancecan.ca) — direct HTML
+- **Code4Lib job board**: `https://jobs.code4lib.org/` (tag pages e.g. `/tags/Research%20Data`;
+  has RSS — trivial to parse). Strong RDM/data-curation fit.
+- **partnership.ca** (CARL/ABRC library jobs), **archivists.ca** job board
+
+### Scrape order (default)
+
+Run Tier 5 (Alliance + Code4Lib) and Tier 2 (gc.ca + crown corps) first — highest public-mandate
+fit. Then Tier 1 Workday queries for CAE/universities. Playwright fallback for iCIMS/Jobillico.
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with your location terms (e.g. "Copenhagen", "Sjælland", "Hovedstaden") where the site supports it.
+Queries are grouped by priority. Combine with location terms ("Montreal", "Quebec", "remote Canada") as the site supports.
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 1: Data Governance / Research Data Management
 
-These match your strongest and most desired career direction.
-
-```
-site:jobindex.dk "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:jobindex.dk "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+Ted's strongest and most desired career direction.
 
 ```
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:linkedin.com/jobs "data governance" Montreal
+site:linkedin.com/jobs "research data management" Canada
+site:linkedin.com/jobs "data steward" Montreal
+site:indeed.ca "data governance specialist" Montreal
+site:indeed.ca "research data management" Montreal OR Quebec
+site:jobs.gc.ca "data governance" Montreal
+site:jobs.gc.ca "data steward"
+"data governance" OR "research data management" site:alliance.can.ca
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
+### Priority 2: LMS / Learning Ecosystem Management
 
-Adjacent roles you could pivot into.
-
-```
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+Strong match; concrete Moodle expertise differentiates Ted.
 
 ```
-site:jobindex.dk [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:jobindex.dk "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:linkedin.com/jobs "Moodle" Montreal
+site:linkedin.com/jobs "learning management system" Montreal
+site:linkedin.com/jobs "learning ecosystem" Montreal
+site:indeed.ca "Moodle administrator" Montreal OR Quebec
+site:indeed.ca "LMS" "learning" manager Montreal
+site:linkedin.com/jobs "instructional technology" Montreal
+site:linkedin.com/jobs "learning and development" "Moodle" Canada
+```
+
+### Priority 3: Open Science / Research Infrastructure
+
+Niche but strong fit; Digital Research Alliance is a primary target.
+
+```
+site:linkedin.com/jobs "open science" Canada
+site:linkedin.com/jobs "data curation" Montreal OR Canada
+site:indeed.ca "open science" OR "research data" Montreal
+"curation officer" OR "data curator" site:alliance.can.ca
+site:jobs.gc.ca "open science"
+site:linkedin.com/jobs "FAIR data" Canada
+```
+
+### Priority 4: Broader Technical / Web Development
+
+Wider net; LAMP+Moodle experience opens doors to general web dev roles.
+
+```
+site:linkedin.com/jobs "full stack developer" "Moodle" Canada
+site:indeed.ca "LAMP" developer Montreal
+site:linkedin.com/jobs "web developer" "data" Montreal
+site:linkedin.com/jobs "technical consultant" "data" Montreal
+site:indeed.ca "software developer" "research" Montreal
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+When evaluating results, verify the job location is within reasonable commute distance or is remote-eligible:
+
+- **Ideal:** Montreal (Plateau, Mile End, downtown, NDG, Rosemont, Verdun)
+- **Acceptable:** Greater Montreal (Laval, Longueuil, South Shore, West Island)
+- **Acceptable:** Remote-first with occasional Montreal travel
+- **Borderline:** Remote Canada (outside Quebec) — flag for Ted to evaluate
+- **Too far:** On-site roles outside Quebec requiring relocation
 
 ## Date Filter
 
 Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
 
+## Role Types Ted May Not Have Considered
+
+Proactively suggest these if the core categories yield thin results:
+
+- **"Knowledge management specialist"** — governance + training combination; appears in federal and university contexts
+- **"Digital scholarship librarian"** or **"data services librarian"** — RDM in university library setting; Ted's open science background is a strong fit
+- **"Technical trainer" / "Moodle trainer"** — at Moodle vendor companies or edtech firms
+- **"Research computing analyst"** — Compute Canada / Digital Research Alliance regional support roles
+- **"AI adoption specialist"** or **"digital transformation advisor"** — emerging role type in government and crown corps; Ted's AI evaluation experience at KnowledgeOne and Premergency is directly relevant
+
 ## Adapting Queries
 
 If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+- `/scrape data governance` — Priority 1 queries + custom "data quality" / "data stewardship" variants
+- `/scrape Moodle` — Priority 2 queries + any known target companies (Premergency, KnowledgeOne competitors)
+- `/scrape federal` — jobs.gc.ca queries across all priority categories

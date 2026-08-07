@@ -162,6 +162,34 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - [ ] Salutation is appropriate (named person if possible)
 - [ ] Headline is engaging and specific, not generic
 
+## Patterns Observed in Ted's Past Applications
+
+*Extracted from 5 cover letters (Bombardier, Digital Research Alliance, BDC, Lunaris/FRDR, Concordia) written in 2026. Use as a starting point; adapt per role.*
+
+### All-prose vs. bullet format
+All 5 past letters used pure prose — no bullet lists. Both formats are valid; see the template above for the bullet approach. Prose suits governance, L&D, and institutional roles. Bullets work well for technical/developer-focused roles where the reader wants to scan skills quickly.
+
+### Reusable credibility anchor paragraph
+Appears in all 5 letters. Adapt the achievement and scope to the target role:
+> "At the McConnell Brain Imaging Centre and Tanenbaum Open Science Institute at McGill University, I [specific achievement — e.g., managed data workflows for dozens of PIs and hundreds of researchers, overseeing data stewardship workflows, metadata standards, and governance requirements]. This included [concrete scope — e.g., helping researchers structure datasets and pipelines so they could be shared, interpreted independently, and reused across institutions]."
+
+### "Intersection of X and Y" opener
+Used in 3/5 letters when the role spans two domains Ted genuinely bridges:
+> "I am applying for [Role] because it sits at the intersection of [domain A] and [domain B] — the space where I have spent the last decade working across Canada's research and technology ecosystem."
+Only use this when both domains are real and the intersection is the genuine reason Ted is applying.
+
+### Subject line for institutional applications
+`Subject: Application: [Full Role Title] ([req# if available])`
+Used for BDC, Lunaris, and Concordia. Appropriate for universities, government bodies, and crown corporations.
+
+### Bilingual identity
+State bilingualism mid-letter as a natural sentence, not in the header:
+> "I am bilingual in French and English, based in Montreal, and [reason this matters for the role]."
+This carries more weight than a CV line for Montreal-based or federal roles.
+
+### Standard closing sequence
+> "I would welcome the opportunity to [specific contribution to their goal]. Thank you for your consideration."
+
 ## Submission Guidelines (Best Practice)
 - Submit only the documents the employer requests
 - Export as PDF to preserve formatting

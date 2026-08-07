@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV — Ted Strauss
 %% Comprehensive overview of all competencies, experience, and achievements.
-%% Use as a master reference when tailoring role-specific CVs.
+%% Use as a reference when tailoring role-specific CVs with /apply.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -10,32 +9,32 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
+% Force name and section headings to render in moderncv blue (color1).
+% Default banking on lualatex+MiKTeX leaves these black.
 \renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
+\usepackage{needspace}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Ted Strauss - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
-% personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+% Personal data
+\name{Ted}{Strauss}
+\address{Montreal, Quebec, Canada}{}{}
+\phone[mobile]{514-475-2374}
+\email{ted.strauss@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/tedstrauss-63b01821}{LinkedIn} | \href{https://scholar.google.com/citations}{Google Scholar}}
 
 \begin{document}
 
@@ -46,7 +45,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Data manager and learning \& development specialist with over a decade of experience in data stewardship, research infrastructure, and cross-institutional collaboration across Canada's academic and private sectors. Supports organizations in deploying training platforms, advancing open science practices, and translating complex data governance initiatives into practical, policy-aligned solutions. Bilingual (EN/FR). 9 peer-reviewed publications; citation count 630; h-index 9.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +55,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Data governance \& research data management}: metadata standards, data stewardship frameworks, policy development, lifecycle management, FAIR principles, DMP authoring, Collibra, OwnCloud
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{LMS \& learning platforms}: Moodle (administration, development, migration, government deployments), LXD, EdX; instructional design, training delivery, communities of practice
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Web development (LAMP++)}: Linux (Ubuntu/Debian/CentOS), Apache, Nginx, MySQL, PostgreSQL, PHP, JavaScript, jQuery, CSS, Bootstrap, Git, Docker, Kubernetes
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Data analysis \& open science}: R, Python (pandas, plotly), Tableau; CONP, DataLad, HeuDiConv, Portage/Alliance network; bibliometrics, grant writing
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Devops \& infrastructure}: SSO, LDAP, Active Directory, IDP, OwnCloud, cloud (AWS, Azure, SaaS), Agile/Scrum, change management, stakeholder facilitation
+
+\item \textbf{Learning \& development}: workshop design and facilitation, community building, AI evaluation and adoption, media production (videography, podcasting, Adobe suite)
 
 \end{itemize}
 
@@ -76,34 +77,86 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{07/2025--01/2026}{Moodle Analyst}{Premergency Inc.}{Canada}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Coordinated between clients and development teams to deliver LMS solutions for government clients, maintaining regulatory compliance
+    \item Managed legacy LMS migrations to Moodle and designed bespoke learning \& development solutions
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{01/2024--10/2024}{Full Stack Developer}{KnowledgeOne}{Montreal, QC}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Developed LMS features for active clients on the eConcordia Moodle platform (LAMP++, LXD)
+    \item Evaluated and adopted AI tools in enterprise learning contexts
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{09/2016--10/2021}{Manager of Data Resources}{McConnell Brain Imaging Centre, The Neuro, McGill University}{Montreal, QC}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Managed data workflows for one of Canada's leading brain imaging centres, supporting dozens of PIs and hundreds of researchers
+    \item Launched OwnCloud portal for self-serve data management; built brain imaging data pipelines and policies for daily acquisition workflows
+    \item Designed a Moodle-based self-serve education portal for researcher onboarding
+    \item Contributed to national research data policy through Portage, CONP, and RDA committee work
+    \item Tech stack: LAMP++, devops, Moodle, OwnCloud, Collibra, LDAP, SSO, R, Agile
 \end{itemize}}}
 
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{08/2020--10/2021}{Data Management \& Sharing Coordinator (p/t)}{Tanenbaum Open Science Institute, The Neuro, McGill University}{Montreal, QC}{}{\vspace{1pt}
+\begin{itemize}
+    \item Supported launch of a new academic unit focused on Open Science
+    \item Designed and delivered training workshops for students and faculty on data management practices
+    \item Built an online knowledge base to educate the public about core open science concepts
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{04/2017--08/2021}{Founder and Director}{Sur Place Media}{Montreal, QC}{}{\vspace{1pt}
+\begin{itemize}
+    \item Founded and operated a neighbourhood arts school; hosted 150 workshop groups with 20 teachers
+    \item Led a successful pivot to fully virtual delivery during the COVID-19 pandemic
+    \item Produced videos, podcasts, and multimedia content; managed operations and programming
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{02/2015--09/2016}{Software Developer}{McGill Centre for Integrative Neuroscience, McGill University}{Montreal, QC}{}{\vspace{1pt}
+\begin{itemize}
+    \item Programmed the data acquisition pipeline for the national CCNA study on aging and the brain using the LORIS platform (PHP, MySQL, JavaScript)
+    \item Contributed to national longitudinal dementia research infrastructure
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{04/2012--10/2014}{Database Administrator \& Software Developer}{Photonic Knowledge}{Montreal, QC}{}{\vspace{1pt}
+\begin{itemize}
+    \item Developed a Drupal ERP system for core sample imaging workflows in the mining exploration sector
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     ADDITIONAL EXPERIENCE
+% ============================================================
+
+\section{Additional Experience}
+\vspace{1pt}
+\begin{itemize}
+\item Kitikmeot Heritage Society — Researcher, writer, producer (2010--2012)
+\item Language Mate — Developer and UX designer (2007--2010)
+\item Moss Rehabilitation Hospital — Research software developer (2007--2010)
+\item University of Connecticut — Research assistant \& software developer (2005--2008)
+\item Columbia University — Research assistant \& software developer (2004--2005)
+\item Universität Bremen — Research assistant \& software developer (2003--2004)
 \end{itemize}
 
 % ============================================================
@@ -114,15 +167,13 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{1998--2003}{B.A. (Honours), Cognitive Science}{McGill University}{Montreal, QC}{}{\vspace{1pt}
+Minor: Music Technology. Topics: Psycholinguistics, cognitive science, computational modeling of language.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2021}{Scientific Community Engagement Fundamentals}{The Center for Scientific Collaboration and Community Engagement (CSCCE)}{}{}{\vspace{1pt}}}
 
 \end{itemize}
 
@@ -133,28 +184,24 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (native), French (bilingual).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     PUBLICATIONS (select — full list at Google Scholar)
 % ============================================================
 
-\section{Publications}
+\section{Selected Publications}
 \vspace{1pt}
 \begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
+\item Halchenko, Y. O., et al. (2024). HeuDiConv --- flexible DICOM conversion into structured directory layouts. \textit{Journal of Open Source Software}, 9(99), 5839.
+\item Poline, J.-B., et al. (2023). Data and tools integration in the Canadian open neuroscience platform. \textit{Scientific Data}, 10(1), 189.
+\item Halchenko, Y. O., et al. (2021). DataLad: distributed system for joint management of code, data, and their relationship. \textit{Journal of Open Source Software}, 6(63), 3262.
+\item Strauss, T. (2021). Data Management Plan Template: Neuroimaging in the Neurosciences. \textit{Zenodo}. \href{https://doi.org/10.5281/zenodo.4673558}{doi:10.5281/zenodo.4673558}
+\item Strauss, T. J., Harris, H. D., \& Magnuson, J. S. (2007). jTRACE: A reimplementation and extension of the TRACE model of speech perception. \textit{Behavior Research Methods}, 39(1), 19--30.
 \end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
 \vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
-\end{itemize}
+\small{Citation count: 630 | h-index: 9 | Full list: \href{https://scholar.google.com/citations}{scholar.google.com/citations}}
 
 % ============================================================
 %     REFERENCES

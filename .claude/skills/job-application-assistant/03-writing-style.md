@@ -104,3 +104,27 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Patterns Observed in Past Applications
+
+*Extracted from 5 cover letters (Bombardier, Digital Research Alliance, BDC, Lunaris/FRDR, Concordia) written in 2026. Add to, don't replace, the rules above.*
+
+### Format
+- **All-prose format used in all 5 past letters** — no bullet lists. This is a valid alternative to the bullet-list template above; choose based on role type. Prose works well for governance, L&D, and institutional roles. Bullets may suit more technical or developer-focused roles.
+
+### Opening Frame
+- **"Intersection of [X] and [Y]" opener** — used in 3/5 letters to frame the role as the exact space Ted occupies. Effective when the role genuinely combines two domains he bridges (e.g., governance + learning culture, technical + policy). Don't force it if the role is single-domain.
+
+### Credibility Anchor
+- **McGill + national research ecosystem paragraph** — appears in all 5 letters as the primary credibility source. Standard reusable block: "At the McConnell Brain Imaging Centre / Tanenbaum Open Science Institute at McGill University, I [specific achievement]. This included [specific scope]." Reusable across governance, RDM, and open science applications; adapt the achievement to match the target role.
+
+### Closing
+- **"I would welcome the opportunity to..."** — used in 4/5 letters. Preferred closing line; confident without over-enthusiasm.
+- **"Thank you for your consideration"** — used as sign-off in 3/5 letters. Pair with the "I would welcome" line above for a clean close.
+
+### Subject Line (institutional / government applications)
+- Pattern: `Subject: Application: [Full Role Title] ([req# if available])`
+- Used in BDC, Lunaris, and Concordia letters. Appropriate for university, government, and crown corporation applications.
+
+### Bilingual Identity
+- **Flag bilingualism mid-letter, not in the header** — "I am bilingual in French and English, based in Montreal" appears as a natural sentence in the body (BDC, Alliance). For Montreal-based roles it's a genuine differentiator; stating it in the body gives it more weight than a CV line.

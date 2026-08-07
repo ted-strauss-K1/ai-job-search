@@ -105,12 +105,20 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For data governance / research data management roles:**
+> Data manager and open science contributor with over a decade of experience across Canada's academic and research ecosystem. Led cross-institutional data stewardship at the McConnell Brain Imaging Centre (McGill University), developed governance frameworks, and contributed to national RDM policy through Portage, CONP, and RDA committee work. Brings a rare combination of technical depth (LAMP++, devops, metadata systems), policy experience, and training expertise. Bilingual (EN/FR); 9 peer-reviewed publications; citation count 630.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+*[Used for: Bombardier, BDC, Digital Research Alliance applications]*
+
+**For LMS / learning ecosystem management roles:**
+> Learning & development specialist and Moodle expert with experience across vendor, client, and institutional contexts. Built and operated training platforms for government and higher education clients; designed L&D programs for researchers, faculty, and non-technical teams; bridged the gap between what learning technology can do and what educators actually need. Background spans Premergency Inc. (government LMS), KnowledgeOne (eConcordia platform), and McConnell Brain Imaging Centre (self-serve Moodle portal). Bilingual (EN/FR).
+
+*[Used for: Concordia Manager Learning Ecosystem application]*
+
+**For software developer / research infrastructure roles:**
+> Full-stack developer with 20+ years of experience building data-centric web applications across research, government, and private sector environments. Co-author on open science infrastructure papers including the Canadian Open Neuroscience Platform (Poline et al., Scientific Data, 2023) and DataLad (Halchenko et al., JOSS, 2021). Core stack: LAMP++ (Linux, Apache/Nginx, MySQL/PostgreSQL, PHP, JavaScript). Brings rare combination of technical depth and domain knowledge of research data management — knows the friction points researchers face because he has worked alongside them.
+
+*[Used for: Lunaris/FRDR Software Developer application]*
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

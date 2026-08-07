@@ -8,32 +8,72 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Candidates (Complete Manually)
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+*These stubs were extracted from the CV and LinkedIn during /setup. Fill in S/T/A/R before using in interviews.*
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. OwnCloud Portal Launch — The Neuro, McGill University (Data governance / self-serve infrastructure)
+**Source:** CV and LinkedIn — Manager of Data Resources role (2016–2021)
+**What happened:** Launched a self-serve data management portal using OwnCloud for researchers at the McConnell Brain Imaging Centre.
+**Why it matters:** Demonstrates ability to design and deliver infrastructure that enables non-technical users; translating governance principles into a working self-serve tool.
+**S/T/A/R stub:**
+- Situation: Researchers at the Brain Imaging Centre needed a reliable, self-serve way to manage and share data; existing workflows were fragmented.
+- Task:
+- Action:
+- Result:
+**Use for:** "Tell me about a technical solution you built for non-technical users", "Describe a time you improved a workflow", "Give an example of infrastructure you designed and launched"
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+---
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. LORIS Data Acquisition Pipeline — CCNA National Study (Software development / research infrastructure)
+**Source:** CV — Software Developer, McGill Centre for Integrative Neuroscience (2015–2016)
+**What happened:** Programmed the data acquisition pipeline for a national longitudinal study on aging and the brain using the LORIS platform (PHP, MySQL, JavaScript).
+**Why it matters:** Shows ability to build reliable research infrastructure for national-scale studies; cross-institutional technical work.
+**S/T/A/R stub:**
+- Situation: A national study (CCNA) required a consistent, automated pipeline to acquire and structure brain imaging data across multiple sites.
+- Task:
+- Action:
+- Result:
+**Use for:** "Describe a complex technical project you built end-to-end", "Tell me about work that required coordination across multiple teams or institutions"
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+---
+
+### 3. Sur Place Media — Virtual Pivot During COVID (Leadership / change management)
+**Source:** CV and cover letters — Founder and Director, Sur Place Media (2017–2021)
+**What happened:** Founded and ran a neighbourhood arts school; successfully pivoted to fully virtual delivery during the COVID-19 pandemic. Hosted 150 workshop groups with 20 teachers.
+**Why it matters:** Strongest example of rapid change management, operational leadership under constraint, and managing a team of instructors with varied technical literacy.
+**S/T/A/R stub:**
+- Situation: In-person arts school suddenly unable to operate due to COVID-19 lockdowns in spring 2020.
+- Task:
+- Action:
+- Result: 150 workshop groups completed; 20 teachers maintained; organization survived and continued programming.
+**Use for:** "Tell me about a time you managed a significant change", "Describe a time things didn't go as planned and how you adapted", "Give an example of leadership under uncertainty"
+
+---
+
+### 4. TOSI Open Science Knowledge Base (Training design / community education)
+**Source:** CV — Data Management and Sharing Coordinator, Tanenbaum Open Science Institute (2020–2021)
+**What happened:** Designed an online knowledge base to educate the public and researchers about core concepts in open science, alongside a workshop series for students and faculty.
+**Why it matters:** Demonstrates instructional design, making technical concepts accessible to diverse audiences, community building — core to L&D and data literacy roles.
+**S/T/A/R stub:**
+- Situation: A newly launched academic unit (TOSI) needed educational resources to build awareness of open science practices among researchers, students, and faculty.
+- Task:
+- Action:
+- Result:
+**Use for:** "Describe a training program you designed from scratch", "Tell me about a time you made a technical topic accessible to a non-specialist audience", "Give an example of community-building work"
+
+---
+
+### 5. Moodle Education Portal — McConnell Brain Imaging Centre (LMS / learning platform)
+**Source:** CV — Manager of Data Resources (2016–2021); referenced in Concordia cover letter
+**What happened:** Designed and launched a self-serve Moodle-based education portal for researchers at the Brain Imaging Centre.
+**Why it matters:** Concrete Moodle implementation example; bridges technical deployment with L&D design.
+**S/T/A/R stub:**
+- Situation: Researchers and staff needed a structured, self-serve way to learn data management practices and tools; no existing learning infrastructure.
+- Task:
+- Action:
+- Result:
+**Use for:** "What Moodle experience do you have?", "Give an example of an LMS you built or configured", "Tell me about a self-directed learning solution you designed"
 
 ## Common Tough Questions
 

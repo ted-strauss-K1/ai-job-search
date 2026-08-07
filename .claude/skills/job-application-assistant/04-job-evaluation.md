@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Data governance, research data management (RDM), LMS/Moodle administration and development, LAMP++ web development, learning & development design, metadata standards, devops/SSO/LDAP, open science, bilingual EN/FR
+**Moderate match areas:** Python/R/data analysis, cloud platforms (AWS/Azure), AI governance and adoption, project/program management, enterprise platforms
+**Weak match areas:** Pure ML/data science, large-scale corporate people management, finance/legal/compliance-only domains, non-web software engineering
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Research data management, data governance in academic/research settings, LMS administration and Moodle development, open science infrastructure, web application development (LAMP stack), training program design and delivery
+**Moderate:** Data governance in enterprise/corporate settings, software developer in non-research domains, technical project management
+**Entry-level:** People management at scale (10+ direct reports), formal enterprise architecture roles
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Data governance specialist, RDM coordinator, or data stewardship manager role in research, government, or regulated enterprise
+- Learning ecosystem manager or Moodle platform lead in higher education or edtech
+- Open science infrastructure contributor (Digital Research Alliance, university research support)
 
-**Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+**Motivation filter:** Evaluate not just whether Ted *can* do the tasks, but whether the tasks will *energize* him. Consider:
+- Tasks that energize: storytelling with data, building communities of practice, designing training programs, making complex systems accessible to non-specialists, cross-institutional collaboration
+- Tasks that drain: pure compliance enforcement with no human/adoption dimension, isolated individual contributor work with no stakeholder interaction, repetitive maintenance with no creative latitude
+- Non-task factors: public mandate or mission-driven culture, degree of autonomy, bilingual environment, distributed/remote team compatibility
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: currently available; motivated by stable role after series of contracts; salary target CAD $75k–$110k
+- **Flexibility**: open to hybrid and remote; Montreal-based; no relocation
+- **Professional development**: wants roles that grow governance + L&D combination, not just one dimension
 
 ### 6. Salary Benchmark (Optional)
 

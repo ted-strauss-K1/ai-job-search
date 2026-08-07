@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Ted Strauss
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Ted Strauss, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,79 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Ted Strauss
+- **Location:** Montreal, Quebec, Canada (open to remote and hybrid; relocation not possible)
+- **Languages:** English (native), French (bilingual)
+- **Status:** Available — most recent contract (Premergency Inc.) ended January 2026
+- **LinkedIn headline:** "Research data manager and published open science contributor | Data governance, metadata, learning & development | Bridging academia and practice across Canada | AI adoption"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.A. (Honours) in Cognitive Science** (1998–2003) — McGill University
+  - Minor: Music Technology
+  - Topics: Psycholinguistics, cognitive science, computational modeling of language, music technology
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Moodle Analyst** (07/2025 – 01/2026) — **Premergency Inc.** (Canada)
+  - Coordinated between clients and dev teams to develop LMS solutions for government clients
+  - Migrated legacy LMS systems to Moodle; designed bespoke L&D solutions for clients
+  - Maintained regulatory compliance for government LMS deployments
+
+- **Full Stack Developer** (01/2024 – 10/2024) — **KnowledgeOne** (Montreal)
+  - Developed LMS features for active clients using LAMP++, Moodle, and LXD
+  - Evaluated and adopted AI tools in enterprise learning contexts
+
+- **Manager of Data Resources** (09/2016 – 10/2021) — **McConnell Brain Imaging Centre, The Neuro, McGill University** (Montreal)
+  - Led data governance, metadata standards, and stewardship workflows for a leading brain imaging centre
+  - Built data pipelines and launched OwnCloud portal for self-serve data management
+  - Designed a Moodle-based self-serve education portal
+  - Contributed to national research policy through Portage, CONP, and RDA committee work
+
+- **Data Management and Sharing Coordinator (p/t)** (08/2020 – 10/2021) — **Tanenbaum Open Science Institute, The Neuro, McGill University** (Montreal)
+  - Designed and administered training workshops for students and faculty on data management and open science
+  - Built an online knowledge base on open science concepts for public education
+
+- **Founder and Director** (04/2017 – 08/2021) — **Sur Place Media** (Montreal)
+  - Founded and ran a neighbourhood arts school; hosted 150 workshop groups with 20 teachers
+  - Successfully pivoted to virtual delivery during the COVID-19 pandemic
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Data governance, research data management, LMS/Moodle administration and development, LAMP++ web development, learning & development design
+- **Secondary:** Python, R, data analysis (pandas, plotly, Tableau), cloud/AWS/Azure, devops/SSO/LDAP, Docker, AI adoption and prompt engineering
+- **Domain:** Open science, Canadian research ecosystem, neuroscience research infrastructure, metadata standards (FAIR principles), bibliometrics
+- **Software:** Moodle, Collibra, OwnCloud, Drupal, WordPress, Docker, Kubernetes, Adobe suite, Git, MS Office/Teams
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Scientific Community Engagement Fundamentals** — The Center for Scientific Collaboration and Community Engagement (CSCCE), 2021
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- Poline, J.-B., et al. (2023). Data and tools integration in the Canadian open neuroscience platform. Scientific Data.
+- Halchenko, Y. O., et al. (2021). DataLad: distributed system for joint management of code, data, and their relationship. JOSS.
+- Strauss, T. J., Harris, H. D., & Magnuson, J. S. (2007). jTRACE. Behavior Research Methods.
+(9 total publications; citation count 630; h-index 9 — full list in 01-candidate-profile.md)
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+(None listed in documents)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Translator/bridge-builder** — moves between technical depth and institutional/policy realities; makes complex data practices accessible to non-specialists
+- **Community builder** — builds communities of practice, embeds data literacy into workflows rather than imposing compliance; recurring theme across all governance applications
+- **Strengths:** Cross-functional communication, governance + training combination, bilingual EN/FR, national research ecosystem navigation, change leadership
+- **Growth areas:** Large-scale enterprise management; formal direct-reports management (frame positively as: "led teams and coordinated multi-stakeholder delivery")
+- **Thrives in:** Organizations with a public mandate; multi-stakeholder contexts requiring diplomacy and sustained relationship-building; roles combining technical contribution with education and communication
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Storytelling with data; making research data accessible, reusable, and impactful for researchers and the public
+- Building learning platforms and training programs that genuinely change how people work with data and technology
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Research/academic infrastructure: Digital Research Alliance of Canada, universities, CONP, Portage network
+- Government/crown corporations: BDC, federal agencies, large regulated enterprises (e.g., Bombardier)
+- Higher education technology: Moodle ecosystem, university IT departments, edtech companies
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Relocation required
+- Pure compliance/enforcement roles with no training, adoption, or community-building dimension
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
