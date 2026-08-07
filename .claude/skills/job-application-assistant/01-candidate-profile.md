@@ -1,3 +1,7 @@
+---
+framework_version: 1.1.1
+---
+
 # Candidate Profile
 
 ## Identity
@@ -7,9 +11,19 @@
 - **Email:** ted.strauss@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/tedstrauss-63b01821
 - **Google Scholar:** https://scholar.google.com/citations
-- **Languages:** English (native), French (bilingual)
 - **Status:** Available — most recent contract (Premergency Inc.) ended January 2026
 - **Constraints:** Based in Montreal; open to remote and hybrid; relocation not possible
+
+### Languages
+<!-- Every language you can work in professionally, with your honest level. Used by the
+Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
+generation. Omit any language you don't actually work in - an undeclared language is treated as
+a hard no, not a gap to smooth over. -->
+
+| Language | Level | Notes |
+|----------|-------|-------|
+| English | Native | Working language for all roles to date |
+| French | Bilingual (professional working proficiency) | Written and spoken; Quebec workplace French |
 
 ## Education
 

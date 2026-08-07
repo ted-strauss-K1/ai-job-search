@@ -1,9 +1,17 @@
 # Search Queries for Job Scraper
 
+## Installed portal CLIs (primary for `/scrape`)
+
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+
+The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+
+**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+
 ## Search Sites
 
-Primary (Canadian job market):
-- **linkedin.com/jobs** — LinkedIn job listings (filter: Montreal, Quebec, Canada or Remote)
+Primary (Canadian job market — scaffold more with `/add-portal`):
+- **linkedin.com/jobs** — LinkedIn job listings (filter: Montreal, Quebec, Canada or Remote); also covered by `linkedin-search` CLI
 - **indeed.ca** — Indeed Canada (major general job board)
 - **jobs.gc.ca** — Government of Canada job board (federal positions; highly relevant for Ted's profile)
 - **workopolis.com** — Canadian job board
@@ -66,7 +74,7 @@ fit. Then Tier 1 Workday queries for CAE/universities. Playwright fallback for i
 
 ## Query Categories
 
-Queries are grouped by priority. Combine with location terms ("Montreal", "Quebec", "remote Canada") as the site supports.
+Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above) - for Ted that is English and French. Combine each query with location terms ("Montreal", "Quebec", "remote Canada") where the site supports it.
 
 ### Priority 1: Data Governance / Research Data Management
 
@@ -131,6 +139,10 @@ When evaluating results, verify the job location is within reasonable commute di
 - **Acceptable:** Remote-first with occasional Montreal travel
 - **Borderline:** Remote Canada (outside Quebec) — flag for Ted to evaluate
 - **Too far:** On-site roles outside Quebec requiring relocation
+
+## Language Filter
+
+Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
 
 ## Date Filter
 

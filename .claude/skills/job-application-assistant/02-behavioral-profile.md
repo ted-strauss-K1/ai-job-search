@@ -1,3 +1,7 @@
+---
+framework_version: 1.0.0
+---
+
 # Behavioral Profile
 
 *This profile is inferred from Ted's LinkedIn About section and 5 cover letters submitted in 2026 (Bombardier, Digital Research Alliance, BDC, Lunaris/FRDR, Concordia). Ted should validate or correct these observations before relying on them in applications.*
