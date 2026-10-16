@@ -58,7 +58,7 @@ When a job posting mentions these keywords, it's a **strong behavioral fit**:
 When a job posting mentions these, flag as **potential friction** (not deal-breakers — just worth noting):
 - "Fast-paced startup environment" / "move fast and break things" — Ted's best work is in sustained, relationship-dependent contexts
 - "Pure technical role, no stakeholder interaction" — underuses his communication strength; may not engage him
-- "Extensive business travel" or relocation — based in Montreal with local commitments
+- "Extensive business travel" — based in Montreal; relocation within Canada is acceptable, but heavy recurring travel is friction
 
 ## Management Style Preferences
 

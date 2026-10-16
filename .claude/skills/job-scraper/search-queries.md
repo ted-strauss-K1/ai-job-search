@@ -18,7 +18,10 @@ Primary (Canadian job market — scaffold more with `/add-portal`):
 - **glassdoor.ca** — Job listings with company reviews
 
 Secondary (sector-specific):
+- **jobs.realventures.com** — Real Ventures (Montreal VC) portfolio-company job board, ~85 companies across Canada/US/international; covered by `realventures-search` CLI
 - **alliancecan.ca/en/latest/careers** — Digital Research Alliance of Canada postings (direct HTML; #1 target)
+- **careers.lassoinformatics.info/jobs** — Lasso Informatics (research data platform; ~10 openings, Study Operations roles fit). Covered by `lassoinformatics-search` CLI; fallback is `https://careers.lassoinformatics.info/api/postings` (public JSON, plain WebFetch/curl works, the HTML page is JS-rendered and returns nothing)
+- **rimuhc.ca/careers** — RI-MUHC (McGill University Health Centre research institute) openings, WebFetch-able; it currently features only a few postings, so treat it as a spot check, not a full list. Its full ATS is `cusm.njoyn.com` (`CLID=55242`, same portal as the hospital, so "THIS IS NOT A HOSPITAL POSITION" in a posting marks the research-institute ones). That ATS sits behind a Radware captcha and returns a challenge page to scripts, so there is **no CLI for it**: do not try to bypass it. Browse it by hand if wanted (the `tbtoken`/`chk` in a shared URL are session tokens; use `https://cusm.njoyn.com/cl3/xweb/Xweb.asp?CLID=55242&page=joblisting&lang=1` in a real browser). RI-MUHC roles also surface through `linkedin-search`.
 - University HR pages (concordia.ca/careers, mcgill.ca/hr, umontreal.ca) — search directly for IT/data roles
 - **charityvillage.com** — Nonprofit and research sector jobs
 - Direct Google searches with `site:` filters for known target organizations
@@ -142,6 +145,41 @@ site:indeed.ca "software developer" "research" Montreal
 site:jobbank.gc.ca "developpeur" OR "developer" Montreal
 ```
 
+### Priority 5: Knowledge Management / Content and Information Governance
+
+Added after the dcbel Product Knowledge Specialist application (2026-10-15). Fits when the role is
+about governed, structured knowledge (taxonomy, metadata, terminology, standards), not pure
+technical writing. Scored Moderate (58) on the first posting: strong on governance and clarity
+for non-specialists, thinner on titled KM/documentation years, so expect to state that gap.
+Titles tried: Knowledge Specialist, Knowledge Manager, Information Architect, Taxonomist,
+Content Strategist, Information Governance Specialist.
+
+```
+site:linkedin.com/jobs "knowledge specialist" Montreal
+site:linkedin.com/jobs "knowledge management" Montreal OR Canada
+site:linkedin.com/jobs "knowledge manager" Montreal
+site:linkedin.com/jobs "information architect" Montreal OR remote Canada
+site:linkedin.com/jobs "taxonomy" OR "taxonomist" Canada
+site:linkedin.com/jobs "content strategist" OR "content governance" Montreal
+site:linkedin.com/jobs "information governance" OR "records and information management" Montreal
+site:linkedin.com/jobs "metadata specialist" OR "metadata librarian" Canada
+site:indeed.ca "knowledge management specialist" Montreal OR Quebec
+site:indeed.ca "specialiste en gestion des connaissances" Montreal
+site:indeed.ca "architecte de l'information" Montreal
+site:jobs.gc.ca "knowledge management" OR "information management" Montreal
+site:jobbank.gc.ca "knowledge" "gestion des connaissances" Montreal
+```
+
+Adjacent titles to match on (also use as keyword variants in the portal CLIs):
+
+- **Knowledge management:** Knowledge Specialist, Knowledge Manager, Knowledge Base Manager, Knowledge Operations, Knowledge Engineer
+- **Structure and standards:** Information Architect, Taxonomist / Taxonomy Specialist, Ontology or Metadata Specialist, Content Standards Lead
+- **Content and documentation:** Content Strategist, Content Designer, Documentation Manager, Senior Technical Writer (only where the role owns standards, not just drafting)
+- **Information governance:** Information Governance Specialist, Records and Information Management (RIM) Analyst, Digital Asset Manager
+- **AI + content:** AI Enablement Specialist, AI Content Operations, Prompt and Content Standards roles
+- **Product-adjacent:** Product Operations Specialist, Customer Education / Enablement Manager, Learning Content Manager
+- **French:** Spécialiste en gestion des connaissances, Architecte de l'information, Gestionnaire de contenu, Conseiller en gestion de l'information, Taxonomiste, Rédacteur technique principal
+
 ## Location Filter
 
 When evaluating results, verify the job location is within reasonable commute distance or is remote-eligible:
@@ -164,7 +202,7 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 
 Proactively suggest these if the core categories yield thin results:
 
-- **"Knowledge management specialist"** — governance + training combination; appears in federal and university contexts
+- **"Knowledge management specialist"** — governance + training combination; appears in federal and university contexts (now covered by Priority 5)
 - **"Digital scholarship librarian"** or **"data services librarian"** — RDM in university library setting; Ted's open science background is a strong fit
 - **"Technical trainer" / "Moodle trainer"** — at Moodle vendor companies or edtech firms
 - **"Research computing analyst"** — Compute Canada / Digital Research Alliance regional support roles

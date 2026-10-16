@@ -12,7 +12,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Identity
 - **Name:** Ted Strauss
-- **Location:** Montreal, Quebec, Canada (open to remote and hybrid; relocation not possible)
+- **Location:** Montreal, Quebec, Canada (open to remote and hybrid; open to relocation anywhere in Canada)
 - **Languages:**
   | Language | Level |
   |----------|-------|
@@ -94,7 +94,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- Relocation required
+- Relocation outside Canada (relocation within Canada is acceptable)
 - Pure compliance/enforcement roles with no training, adoption, or community-building dimension
 
 ## Repo Structure

@@ -12,7 +12,7 @@ framework_version: 1.1.1
 - **LinkedIn:** https://www.linkedin.com/in/tedstrauss-63b01821
 - **Google Scholar:** https://scholar.google.com/citations
 - **Status:** Available — most recent contract (Premergency Inc.) ended January 2026
-- **Constraints:** Based in Montreal; open to remote and hybrid; relocation not possible
+- **Constraints:** Based in Montreal; open to remote and hybrid; open to relocation anywhere in Canada
 
 ### Languages
 <!-- Every language you can work in professionally, with your honest level. Used by the

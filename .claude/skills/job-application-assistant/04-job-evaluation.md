@@ -93,7 +93,8 @@ Does the role and company culture match the behavioral profile?
 ### 4. Location & Logistics (Pass/Fail + Notes)
 - Within commute range: PASS
 - Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Requires relocation within Canada: PASS (note the destination city)
+- Requires relocation outside Canada: FAIL (deal-breaker)
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -118,7 +119,7 @@ Does this role advance career goals and contain tasks that energize?
 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: currently available; motivated by stable role after series of contracts; salary target CAD $75k–$110k
-- **Flexibility**: open to hybrid and remote; Montreal-based; no relocation
+- **Flexibility**: open to hybrid and remote; Montreal-based; open to relocation anywhere in Canada
 - **Professional development**: wants roles that grow governance + L&D combination, not just one dimension
 
 ### 6. Salary Benchmark (Optional)
