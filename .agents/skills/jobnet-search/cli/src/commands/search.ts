@@ -18,11 +18,16 @@ export interface JobAdRaw {
   postalCode: number | null
   postalDistrictName: string | null
   country: string
-  publicationDate: string
+  // A TypeScript claim is not runtime validation: apiFetch casts the JSON
+  // body, so a null here arrives typed as string and .slice() throws,
+  // killing the whole search as API_ERROR (#418). Typed nullable so the
+  // compiler enforces the guard below.
+  publicationDate: string | null
   applicationDeadline: string | null
   applicationDeadlineStatus: string | null
   workHourPartTime: boolean
   isExternal: boolean
+  jobAdUrl?: string | null
   hasLogo: boolean
   logoUrl: string | null
   cvr: string | null
@@ -79,28 +84,60 @@ export function buildSearchParams(flags: SearchFlags): Record<string, string> {
   return params
 }
 
+/**
+ * Return the destination URL for an external ad, if it has a valid http(s)
+ * jobAdUrl. Only an absolute http(s) URL is used: the value is employer-supplied
+ * and downstream steps fetch it. Anything else returns null and the caller keeps
+ * the jobnet.dk route to preserve a unique URL for /scrape deduplication.
+ */
+export function externalAdUrl(job: Pick<JobAdRaw, "isExternal" | "jobAdUrl">): string | null {
+  const raw = job.jobAdUrl?.trim()
+  if (!job.isExternal || !raw) return null
+  try {
+    const { protocol } = new URL(raw)
+    return protocol === "https:" || protocol === "http:" ? raw : null
+  } catch {
+    return null
+  }
+}
+
 export function createSearchOutput(data: SearchApiResponse, flags: SearchFlags) {
-  let results = data.jobAds.map((job) => ({
-    jobAdId: job.jobAdId,
-    title: job.title,
-    hiringOrgName: job.hiringOrgName,
-    occupation: job.occupation ?? null,
-    municipality: job.municipality ?? null,
-    postalCode: job.postalCode ?? null,
-    postalDistrictName: job.postalDistrictName ?? null,
-    country: job.country,
-    publicationDate: job.publicationDate,
-    applicationDeadline: job.applicationDeadline ?? null,
-    applicationDeadlineStatus: job.applicationDeadlineStatus ?? null,
-    workHourPartTime: job.workHourPartTime,
-    isExternal: job.isExternal,
-    hasLogo: job.hasLogo,
-    logoUrl: job.logoUrl ?? null,
-    cvr: job.cvr ?? null,
-    workPlaceAddress: job.workPlaceAddress ?? "",
-    isSeen: job.isSeen,
-    isFavorite: job.isFavorite,
-  }))
+  let results = data.jobAds.map((job) => {
+    const destination = externalAdUrl(job)
+    return {
+      jobAdId: job.jobAdId,
+      title: job.title,
+      hiringOrgName: job.hiringOrgName,
+      occupation: job.occupation ?? null,
+      municipality: job.municipality ?? null,
+      postalCode: job.postalCode ?? null,
+      postalDistrictName: job.postalDistrictName ?? null,
+      country: job.country,
+      publicationDate: job.publicationDate,
+      applicationDeadline: job.applicationDeadline ?? null,
+      applicationDeadlineStatus: job.applicationDeadlineStatus ?? null,
+      workHourPartTime: job.workHourPartTime,
+      isExternal: job.isExternal,
+      jobAdUrl: destination,
+      hasLogo: job.hasLogo,
+      logoUrl: job.logoUrl ?? null,
+      cvr: job.cvr ?? null,
+      workPlaceAddress: job.workPlaceAddress ?? "",
+      isSeen: job.isSeen,
+      isFavorite: job.isFavorite,
+      // /scrape contract aliases (add-portal.md: every result carries at least
+      // id, title, company, location, date, url). `id` is the jobAdId - the
+      // value `detail` takes - under the name every other portal CLI uses.
+      id: job.jobAdId,
+      company: job.hiringOrgName,
+      location: job.postalDistrictName ?? job.municipality ?? null,
+      date: job.publicationDate ? job.publicationDate.slice(0, 10) : null,
+      deadline: job.applicationDeadline && !job.applicationDeadline.startsWith("1900-01-01")
+        ? job.applicationDeadline.slice(0, 10)
+        : null,
+      url: destination ?? `https://jobnet.dk/find-job/${job.jobAdId}`,
+    }
+  })
 
   if (flags.limit !== undefined) {
     results = results.slice(0, flags.limit)
@@ -204,7 +241,7 @@ type JobAdResult = {
   occupation: string | null
   municipality: string | null
   postalCode: number | null
-  publicationDate: string
+  publicationDate: string | null
   applicationDeadline: string | null
 }
 
